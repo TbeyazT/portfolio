@@ -1,149 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>TbeyazT's Portfolio</title>
     <style>
-        * {
-            box-sizing: border-box;
+        body {
             margin: 0;
             padding: 0;
-        }
-        
-        body {
             font-family: Arial, sans-serif;
-            background-color: #222;
-            color: #fff;
-        }
-        
-        header {
             background-color: #000;
+        }
+
+        .header {
             padding: 20px;
             text-align: center;
+            color: #fff;
         }
-        
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 18px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px;
-        }
-        
-        .section {
-            margin-bottom: 40px;
-        }
-        
-        .section-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        
-        .section-content {
-            font-size: 18px;
-        }
-        
-        .projects {
+
+        .works {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-        
-        .project {
-            flex-basis: calc(33.33% - 20px);
-            margin-bottom: 20px;
-            background-color: #111;
+            justify-content: center;
+            align-items: flex-start;
             padding: 20px;
-            border-radius: 5px;
         }
-        
-        .project-title {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .project-description {
-            font-size: 16px;
-        }
-        
-        .contact {
+
+        .work {
+            width: 300px;
+            margin: 20px;
+            background-color: #111;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            color: #fff;
             text-align: center;
-            margin-top: 40px;
         }
-        
-        .contact-title {
+
+        .work h2 {
             font-size: 24px;
             margin-bottom: 10px;
         }
-        
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
+
+        .work p {
+            font-size: 16px;
         }
-        
-        .contact-link {
-            margin: 0 10px;
-            font-size: 18px;
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .contact-link:hover {
-            color: #ff0000;
+
+        .work video {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-        <p>Welcome to my portfolio website. I showcase my projects and skills here.</p>
-    </header>
-
-    <div class="container">
-        <section class="section">
-            <h2 class="section-title">About Me</h2>
-            <p class="section-content">I am a passionate web developer with experience in HTML, CSS, and JavaScript. I love creating beautiful and responsive websites.</p>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3 class="project-title">Project 1</h3>
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod felis sed turpis sollicitudin fermentum.</p>
-                </div>
-                <div class="project">
-                    <h3 class="project-title">Project 2</h3>
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod felis sed turpis sollicitudin fermentum.</p>
-                </div>
-                <div class="project">
-                    <h3 class="project-title">Project 3</h3>
-                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod felis sed turpis sollicitudin fermentum.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact">
-                <p class="contact-title">Let's connect!</p>
-                <div class="contact-links">
-                    <a class="contact-link" href="mailto:example@example.com">Email</a>
-                    <a class="contact-link" href="https://linkedin.com/">LinkedIn</a>
-                    <a class="contact-link" href="https://github.com/">GitHub</a>
-                </div>
-            </div>
-        </section>
+    <div class="header">
+        <h1>Hello, I am TbeyazT</h1>
+        <p>I am a Roblox Scripter with over 4 years of experience</p>
     </div>
+
+    <div class="works">
+        <div class="work">
+            <h2>UI Animation</h2>
+            <video controls>
+                <source src="https://streamable.com/4kjlly" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="work">
+            <h2>Remade Airstrike</h2>
+            <video controls>
+                <source src="https://streamable.com/5y4sln" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="work">
+            <h2>Downed System</h2>
+            <video controls>
+                <source src="https://streamable.com/42nmkq" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="work">
+            <h2>Combat System</h2>
+            <video controls>
+                <source src="https://streamable.com/mt9t3t" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    
+    <p>More projects coming soon!</p>
 </body>
 </html>
