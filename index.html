@@ -4,15 +4,15 @@
     <title>Animated Story</title>
     <style>
         body {
-            background-color: black;
+            background-color: #000;
+            overflow: hidden;
         }
         
         #scene {
             position: relative;
-            width: 800px;
-            height: 600px;
-            perspective: 800px;
-            margin: 0 auto;
+            width: 100vw;
+            height: 100vh;
+            perspective: 1000px;
         }
         
         #ground {
@@ -22,26 +22,26 @@
             transform: translate(-50%, -50%);
             width: 600px;
             height: 400px;
-            background-color: black;
+            background-color: #000;
             border-radius: 50%;
-            box-shadow: 0 0 20px white;
-            animation: rotate 10s infinite linear;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            animation: rotate 30s infinite linear;
         }
         
         #moon {
             position: absolute;
             top: 10%;
             left: 10%;
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            background-color: white;
-            animation: float 4s infinite ease-in-out;
+            background: radial-gradient(#ffd700, #ff8c00);
+            animation: float 8s infinite ease-in-out;
         }
         
         @keyframes rotate {
             from {
-                transform: rotateY(0);
+                transform: rotateY(0deg);
             }
             to {
                 transform: rotateY(360deg);
@@ -57,6 +57,28 @@
                 transform: translateX(100px) translateY(-50px);
             }
         }
+        
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Arial', sans-serif;
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            animation: fade 4s infinite;
+        }
+        
+        @keyframes fade {
+            0% {
+                opacity: 1;
+            }
+            50%,
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -65,5 +87,6 @@
             <div id="moon"></div>
         </div>
     </div>
+    <div id="text">Once upon a time...</div>
 </body>
 </html>
