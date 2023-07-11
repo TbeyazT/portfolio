@@ -2,11 +2,12 @@
 <html>
 <head>
     <title>TbeyazT's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Lato', sans-serif;
             background-color: #000;
             color: #fff;
         }
@@ -56,9 +57,55 @@
         }
 
         .contact a {
-            color: #fff;
+            display: block;
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            font-weight: bold;
             text-decoration: none;
-            margin: 10px;
+            background: #333;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 3px solid #333;
+            transition: all .35s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact a:hover {
+            width: 200px;
+            border: 3px solid #2ecc71;
+            background: transparent;
+            color: #2ecc71;
+        }
+
+        .contact a:hover .icon {
+            border: 3px solid #2ecc71;
+            right: -25%;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border: 3px solid transparent;
+            position: absolute;
+            transform: rotate(45deg);
+            right: 0;
+            top: 0;
+            z-index: -1;
+            transition: all .35s;
+        }
+
+        .icon svg {
+            width: 30px;
+            position: absolute;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+            transform: rotate(-45deg);
+            fill: #2ecc71;
+            transition: all .35s;
         }
     </style>
 </head>
@@ -100,9 +147,30 @@
     
     <div class="contact">
         <h2>Contact Me:</h2>
-        <a href="mailto:your-email@example.com">Email</a>
-        <a href="https://github.com/TbeyazT">GitHub</a>
-        <a href="https://github.com/your-github-profile">GitHub</a>
+        <a href="mailto:your-email@example.com">
+            Email
+            <span class="icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 15l-11-8h22l-11 8zm-11-13h22v2h-22zm22 6h-22l11 8 11-8zm-10 3l-1.552-1.245c-2.835-2.268-4.448-3.555-4.448-5.207v-1.548h-2v1.619c0 .499-.16.89-.504 1.265-.368.405-.894.623-1.612.623h-.332v2h.371c.458 0 .735.075 1.043.352.204.179.408.445.708 1.031l1.589.352-.392 1.766zm1 0l.422 1.902 1.592-.353c.3-.587.504-.853.708-1.032.308-.277.585-.352 1.043-.352h.371v-2h-.333c-.718 0-1.244-.218-1.612-.623-.344-.375-.504-.766-.504-1.265v-1.62h-2v1.548c0 1.652-1.612 2.939-4.447 5.207l-1.553 1.244.392-1.766zm2.994 1.004c.178.24.258.44.262.744v.252h2v-.25c0-.368-.086-.568-.34-.822l-1.922-2.066zm-6.993 0l-1.922 2.066c-.254.254-.34.454-.34.822v.25h2v-.252c.004-.304.084-.504.262-.744z"/>
+                </svg>
+            </span>
+        </a>
+        <a href="https://www.linkedin.com/in/your-linkedin-profile">
+            LinkedIn
+            <span class="icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12c6.627 0 12-5.373 12-12s-5.373-12-12-12zm-2 17h-2v-6h2v6zm-1-6.891c-.674 0-1.22-.547-1.22-1.219 0-.673.546-1.22 1.22-1.22.673 0 1.219.547 1.219 1.22 0 .672-.546 1.219-1.219 1.219zm9 6.891h-1.999v-3.813c0-1.062-.021-2.437-1.478-2.437-1.479 0-1.701 1.157-1.701 2.352v4.898h-2v-6h2v1.016c.229-.354 .63-.859 1.537-.859 1.123 0 2.082.728 2.082 2.749v3.094z"/>
+                </svg>
+            </span>
+        </a>
+        <a href="https://github.com/your-github-profile">
+            GitHub
+            <span class="icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 12c0-6.628 5.373-12 12-12s12 5.372 12 12c0 5.303-3.438 9.8-8.207 11.387-.602.111-.821-.262-.821-.582v-2.225c0-1.032-.421-1.779-.895-2.143 2.912-.322 5.964-1.391 5.964-6.217 0-1.375-.479-2.494-1.264-3.373.124-.323.55-1.604-.122-3.343 0 0-1.063-.34-3.487 1.293a11.752 11.752 0 0 0-6.197 0c-2.423-1.633-3.486-1.293-3.486-1.293-.672 1.739-.246 3.02-.122 3.343-.786.879-1.265 1.998-1.265 3.373 0 4.838 3.049 5.895 5.969 6.209-.373.323-.891.925-.891 1.896v2.804c0 .323-.221.703-.834.582-4.768-1.587-8.196-6.084-8.196-11.386zm13.091 9.112c.006.012.012.023.018.035v.001c.079.135.189.254.328.351 1.429 1.033 3.413.678 4.155.256 .068-.074.34-.329.256-.713-.31-1.227-1.225-2.06-2.401-2.06-1.406 0-2.401 1.28-2.401 2.568 0 1.548.901 2.445 2.195 2.445 .668 0 1.355-.339 1.721-.646.099-.077.215-.168.346-.273v.001z"/>
+                </svg>
+            </span>
+        </a>
     </div>
 </body>
 </html>
