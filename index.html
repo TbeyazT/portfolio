@@ -5,25 +5,32 @@
     <style>
         .animated-button {
             display: inline-block;
+            padding: 12px 24px;
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
             position: relative;
             overflow: hidden;
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
             transition: all 0.3s ease;
         }
         
         .animated-button:before {
             content: "";
             position: absolute;
+            left: 0;
             top: 0;
-            left: -100%;
             width: 100%;
             height: 100%;
-            background-color: #ff0000;
-            transition: all 0.3s ease;
+            background-color: #fff;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
         }
         
         .animated-button:hover {
@@ -31,26 +38,13 @@
         }
         
         .animated-button:hover:before {
-            left: 0;
-            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff);
-            animation: rainbow 2s linear infinite;
-        }
-        
-        @keyframes rainbow {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+            transform: scaleX(1);
+            transform-origin: left;
         }
     </style>
 </head>
 <body>
-    <a class="animated-button" onclick="openNewTab()">ayak fotoları için bana tıkla</a>
+    <button class="animated-button" onclick="openNewTab()">ayak fotoları için bana tıkla</button>
 
     <script>
         function openNewTab() {
