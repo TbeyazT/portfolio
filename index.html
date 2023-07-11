@@ -1,103 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
+    <title>Animated Story</title>
     <style>
         body {
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
+            background-color: black;
         }
         
-        .container {
-            width: 400px;
-            margin: 100px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        #scene {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            perspective: 800px;
+            margin: 0 auto;
         }
         
-        .container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
+        #ground {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 400px;
+            background-color: black;
+            border-radius: 50%;
+            box-shadow: 0 0 20px white;
+            animation: rotate 10s infinite linear;
         }
         
-        .form-group {
-            margin-bottom: 20px;
+        #moon {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            animation: float 4s infinite ease-in-out;
         }
         
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #666;
+        @keyframes rotate {
+            from {
+                transform: rotateY(0);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
         }
         
-        .form-group input[type="text"],
-        .form-group input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            outline: none;
-        }
-        
-        .form-group input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #333;
-            border: none;
-            border-radius: 3px;
-            color: #fff;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        
-        .form-group input[type="submit"]:hover {
-            background-color: #111;
-        }
-        
-        .success-message {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #4caf50;
-            color: #fff;
-            border-radius: 3px;
-            animation: fadeOut 5s linear;
-        }
-        
-        @keyframes fadeOut {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateX(0) translateY(0);
+            }
+            50% {
+                transform: translateX(100px) translateY(-50px);
+            }
         }
     </style>
-    <script>
-        function showSuccessMessage() {
-            var messageElement = document.getElementById("successMessage");
-            messageElement.style.display = "block";
-        }
-    </script>
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <form onsubmit="event.preventDefault(); showSuccessMessage();">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" placeholder="Enter your username">
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="Enter your password">
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login">
-            </div>
-        </form>
-        <div id="successMessage" class="success-message">Login Successful!</div>
+    <div id="scene">
+        <div id="ground">
+            <div id="moon"></div>
+        </div>
     </div>
 </body>
 </html>
