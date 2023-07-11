@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Animated Story</title>
+    <title>Visual Festival</title>
     <style>
         body {
             background-color: #000;
@@ -22,7 +22,7 @@
             transform: translate(-50%, -50%);
             width: 600px;
             height: 400px;
-            background-color: #000;
+            background: linear-gradient(135deg, #FF00FF, #00FFFF, #00FF00, #FFFF00, #FF0000, #FF00FF);
             border-radius: 50%;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
             animation: rotate 30s infinite linear;
@@ -79,6 +79,45 @@
                 opacity: 0;
             }
         }
+        
+        #balloons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: moveBalloons 20s infinite linear;
+        }
+        
+        @keyframes moveBalloons {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50vh);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF00FF, #00FFFF, #00FF00, #FFFF00, #FF0000, #FF00FF);
+            animation: floatBalloon 4s infinite alternate ease-in-out;
+        }
+        
+        @keyframes floatBalloon {
+            from {
+                transform: translateX(0) translateY(0);
+            }
+            to {
+                transform: translateX(20vw) translateY(-20vh);
+            }
+        }
     </style>
 </head>
 <body>
@@ -87,6 +126,18 @@
             <div id="moon"></div>
         </div>
     </div>
-    <div id="text">Once upon a time...</div>
+    <div id="text">Welcome to the Visual Festival!</div>
+    <div id="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
 </body>
 </html>
