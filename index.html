@@ -57,12 +57,34 @@
         .form-group input[type="submit"]:hover {
             background-color: #111;
         }
+        
+        .success-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border-radius: 3px;
+            animation: fadeOut 5s linear;
+        }
+        
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
     </style>
+    <script>
+        function showSuccessMessage() {
+            var messageElement = document.getElementById("successMessage");
+            messageElement.style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form>
+        <form onsubmit="event.preventDefault(); showSuccessMessage();">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" placeholder="Enter your username">
@@ -75,6 +97,7 @@
                 <input type="submit" value="Login">
             </div>
         </form>
+        <div id="successMessage" class="success-message">Login Successful!</div>
     </div>
 </body>
 </html>
