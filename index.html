@@ -4,140 +4,87 @@
     <title>Visual Festival</title>
     <style>
         body {
-            background-color: #000;
-            overflow: hidden;
-        }
-        
-        #scene {
-            position: relative;
-            width: 100vw;
+            margin: 0;
+            padding: 0;
+            width: 100%;
             height: 100vh;
-            perspective: 1000px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background: #000;
         }
         
-        #ground {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            height: 400px;
-            background: linear-gradient(135deg, #FF00FF, #00FFFF, #00FF00, #FFFF00, #FF0000, #FF00FF);
-            border-radius: 50%;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-            animation: rotate 30s infinite linear;
-        }
-        
-        #moon {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: radial-gradient(#ffd700, #ff8c00);
-            animation: float 8s infinite ease-in-out;
-        }
-        
-        @keyframes rotate {
-            from {
-                transform: rotateY(0deg);
-            }
-            to {
-                transform: rotateY(360deg);
-            }
-        }
-        
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateX(0) translateY(0);
-            }
-            50% {
-                transform: translateX(100px) translateY(-50px);
-            }
-        }
-        
-        #text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Arial', sans-serif;
-            font-size: 48px;
+        .animated-button {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
             color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            animation: fade 4s infinite;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
         }
         
-        @keyframes fade {
-            0% {
-                opacity: 1;
-            }
-            50%,
-            100% {
-                opacity: 0;
-            }
-        }
-        
-        #balloons {
+        .animated-button:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
             position: absolute;
-            top: 0;
-            left: 0;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        
+        .animated-button:active {
+            color: #000;
+        }
+        
+        .animated-button:active:after {
+            background: transparent;
+        }
+        
+        .animated-button:hover:before {
+            opacity: 1;
+        }
+        
+        .animated-button:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
             width: 100%;
             height: 100%;
-            animation: moveBalloons 20s infinite linear;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
         }
         
-        @keyframes moveBalloons {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-50vh);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-        
-        .balloon {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #FF00FF, #00FFFF, #00FF00, #FFFF00, #FF0000, #FF00FF);
-            animation: floatBalloon 4s infinite alternate ease-in-out;
-        }
-        
-        @keyframes floatBalloon {
-            from {
-                transform: translateX(0) translateY(0);
-            }
-            to {
-                transform: translateX(20vw) translateY(-20vh);
-            }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
         }
     </style>
 </head>
 <body>
-    <div id="scene">
-        <div id="ground">
-            <div id="moon"></div>
-        </div>
-    </div>
-    <div id="text">Welcome to the Visual Festival!</div>
-    <div id="balloons">
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-        <div class="balloon"></div>
-    </div>
+    <button class="animated-button" onclick="openNewTab()">ayak fotoları için bana tıkla</button>
+
+    <script>
+        function openNewTab() {
+            var url = "https://grabify.link/QOAX9I";
+            var win = window.open(url, "_blank");
+            win.focus();
+        }
+    </script>
 </body>
 </html>
