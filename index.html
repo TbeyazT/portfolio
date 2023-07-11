@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>huseyinİfsa.Com</title>
+    <title>Login Page</title>
     <style>
-        .animated-button {
-            display: inline-block;
-            padding: 12px 24px;
-            border: none;
-            background-color: transparent;
-            color: #fff;
-            font-size: 16px;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
         }
         
-        .animated-button:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
+        .container {
+            width: 400px;
+            margin: 100px auto;
+            padding: 20px;
             background-color: #fff;
-            z-index: -1;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         
-        .animated-button:hover {
-            color: #000;
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
         }
         
-        .animated-button:hover:before {
-            transform: scaleX(1);
-            transform-origin: left;
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #666;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            outline: none;
+        }
+        
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .form-group input[type="submit"]:hover {
+            background-color: #111;
         }
     </style>
 </head>
 <body>
-    <button class="animated-button" onclick="openNewTab()">ayak fotoları için bana tıkla</button>
-
-    <script>
-        function openNewTab() {
-            var url = "https://grabify.link/QOAX9I";
-            var win = window.open(url, "_blank");
-            win.focus();
-        }
-    </script>
+    <div class="container">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
