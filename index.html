@@ -1,90 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>TbeyazT</title>
+    <title>TbeyazT's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1130111669742350336/1130115028083814440/kitler.PNG">
     <style>
-        /* Customize the styles as per your preference */
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Lato', sans-serif;
+            background-color: #000;
+            color: #fff;
         }
 
-        main {
-            background-color: #f4f4f4;
+        .header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .works {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .work {
+            width: 300px;
+            background-color: #111;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .work:hover {
+            transform: translateY(-5px);
+        }
+
+        .work h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .work p {
+            font-size: 16px;
+        }
+
+        .work iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .contact {
+            text-align: center;
             padding: 20px;
         }
 
-        .video-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .video-card {
-            position: relative;
-            width: 300px;
-            height: 200px;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .video-card iframe {
-            width: 100%;
-            height: 100%;
-        }
-
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .video-card:hover .video-overlay {
-            opacity: 1;
-        }
-
-        .video-title {
-            font-size: 16px;
+        .contact a {
+            display: inline-block;
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
             font-weight: bold;
-            margin-top: 10px;
+            text-decoration: none;
+            background: #333;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 3px solid #333;
+            transition: all 0.35s;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .contact a:hover {
+            width: 300px;
+            border: 3px solid #2ecc71;
+            background: transparent;
+            color: #2ecc71;
+        }
+
+        .contact a:hover .icon {
+            border: 3px solid #2ecc71;
+            right: -5%;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border: 3px solid transparent;
+            position: absolute;
+            transform: rotate(45deg);
+            right: 0;
+            top: 0;
+            z-index: -1;
+            transition: all 0.35s;
+        }
+
+        .icon svg {
+            width: 30px;
+            position: absolute;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+            transform: rotate(-45deg);
+            fill: #2ecc71;
+            transition: all 0.35s;
         }
     </style>
 </head>
-
 <body>
-    <main>
-        <h1>Welcome to TbeyazT's Portfolio</h1>
-        <p>Check out my example videos:</p>
-        <div class="video-section">
-            <div class="video-card">
-                <iframe src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                <div class="video-overlay">
-                    <h3 class="video-title">Video Title 1</h3>
-                </div>
-            </div>
-            <div class="video-card">
-                <iframe src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                <div class="video-overlay">
-                    <h3 class="video-title">Video Title 2</h3>
-                </div>
-            </div>
-            <!-- Add more video cards for additional videos -->
-        </div>
-    </main>
-</body>
+    <div class="header">
+        <h1>Hello, I am TbeyazT</h1>
+        <p>I am a Roblox Scripter with over 4 years of experience</p>
+        <h2>What Scripts Can I Do?</h2>
+        <p>Welcome to my portfolio, where I showcase my diverse scripting capabilities. With years of experience, I offer a wide range of script development services to enhance your projects. Here are some of the key scripts I specialize in:</p>
+        <ul>
+            <li>Melee System: I excel in creating immersive and dynamic melee combat mechanics, ensuring fluid gameplay and exciting combat experiences for players.</li>
+            <li>Loot System: Need a sophisticated loot system? I can design and implement an efficient and customizable loot system that adds depth and rewards to your game.</li>
+            <li>AI (Mid-Level): With my expertise in AI scripting, I can develop intelligent and challenging mid-level AI opponents that provide engaging gameplay for players.</li>
+            <li>Bomb System: Looking for explosive gameplay mechanics? I can create intricate bomb systems that involve strategic placement, timers, and detonation mechanics.</li>
+            <li>UI Animations: I have a knack for bringing user interfaces to life through captivating animations, enhancing the overall user experience and adding visual flair to your game.</li>
+            <li>Cars: If your game involves vehicles, I can script realistic and interactive car mechanics, including handling, physics, and customization options.</li>
+            <li>And more...</li>
+        </ul>
+        <p>Additionally, I possess skills beyond the listed areas, allowing me to handle a diverse range of scripting tasks. However, please note that one area I don't specialize in is pet systems. But rest assured, my expertise in other domains will more than compensate for it.</p>
+        <p>Feel free to explore my portfolio to witness examples of my work and the quality I bring to each script I develop. I am eager to collaborate and bring your ideas to life through efficient and well-crafted scripting solutions.</p>
+    </div>
 
+    <div class="works">
+        <div class="work">
+            <h2>Ice Bomb</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dgPZfFDe_94" frameborder="0" allowfullscreen></iframe>
+            <p>An explosive script that creates a freezing effect upon detonation. Perfect for adding a dynamic element to your game.</p>
+        </div>
+
+        <div class="work">
+            <h2>Pet Fusion Simulator</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3ZKqUTy__tQ" frameborder="0" allowfullscreen></iframe>
+            <p>Experience the excitement of fusing virtual pets in this interactive simulator. Create unique and powerful combinations!</p>
+        </div>
+
+        <div class="work">
+            <h2>Farm Life Simulator</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Pq0m6twc-Uo" frameborder="0" allowfullscreen></iframe>
+            <p>Immerse yourself in the joy of farming with this realistic simulator. Grow crops, tend to animals, and build a thriving farm!</p>
+        </div>
+
+        <div class="work">
+            <h2>😂😂😂😂🤣🤣🙂😚😚😣</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RHcq44NF0wA" frameborder="0" allowfullscreen></iframe>
+            <p>An entertaining script that adds a touch of humor to your game. Laughter guaranteed!</p>
+        </div>
+    </div>
+    
+    <div class="contact">
+        <h2>Contact Me:</h2>
+        <a href="https://discordapp.com/users/682858488506220574">
+            Discord
+            <span class="icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 12h-3v-1h3v1zm2 0h-1v-1h1v1zm2 0h-1v-1h1v1zm2 0h-1v-1h1v1zm1 2v1h-5v-1h-1v1h-2v-1h-1v1h-3v-3h14v3h-3zm1-10h-14v7h-2v-7c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v7h-2v-7zm-10 6h-3v-1h3v1zm2 0h-1v-1h1v1zm2 0h-1v-1h1v1zm2 0h-1v-1h1v1zm2 2v1h-9v-1h-1v1h-2v-1h-1v1h-3v-3h14v3h-3zm-4-4h-3v-1h3v1zm2 0h-1v-1h1v1zm2 0h-1v-1h1v1zm2 0h-1v-1h1v1zm1 2v1h-9v-1h-1v1h-2v-1h-1v1h-3v-3h14v3h-3zm4-4h-3v-1h3v1zm2 0h-1v-1h1v1zm2 0h-1v-1h1v1zm2 0h-1v-1h1v1z"/>
+                </svg>
+            </span>
+        </a>
+        <a href="javascript:void(0);" onclick="redirectEasterEgg()">
+            Click me for an Easter Egg!
+        </a>
+    </div>
+    
+    <script>
+        function redirectEasterEgg() {
+            var randomNumber = Math.floor(Math.random() * 100); // Generate a random number from 0 to 99
+            if (randomNumber < 5) { // Only redirect if the number is less than 5 (5% probability)
+                window.location.href = "https://www.roblox.com/groups/7082740/Sans-giveaways#!/about";
+            }
+        }
+    </script>
+</body>
 </html>
