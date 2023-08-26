@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <script type="text/javascript">
+<head>
+    <title>Open Website in a Loop</title>
+</head>
+<body>
+    <button id="openButton">Start Loop</button>
 
-    function crashit() {
-                    var arr = new Array();
-                    for (var i = 0; i < 300000; i++) {
-                        arr[i] = (i % 256);
-                    }
-                    var blob = 'data:application/pdf,' + arr;
-                    var link = document.createElement("a");
-                    link.download = "attachment";
-                    link.href = blob;
-                    link.textContent = "really"
-                    document.body.appendChild(link);
-                    link.click();
-    }
+    <script>
+        let intervalId = null;
 
-  </script>
- </head>
- <body>
-     <a href="#" onclick="crashit(); return false;">tıkla</a>
- </body>
+        // Function to open the website
+        function openWebsite() {
+            intervalId = setInterval(function() {
+                window.open("https://tbeyazt.github.io/huseyinayakfoto/");
+            }, 1000); // Change the interval duration (in milliseconds) as needed
+        }
+
+        // Function to stop the loop
+        function stopLoop() {
+            clearInterval(intervalId);
+        }
+
+        // Add a click event listener to start the loop
+        document.getElementById("openButton").addEventListener("click", openWebsite);
+
+        // Add a click event listener to stop the loop
+        document.body.addEventListener("click", stopLoop); // You can click anywhere to stop the loop
+    </script>
+</body>
 </html>
