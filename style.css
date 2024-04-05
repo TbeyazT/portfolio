@@ -57,102 +57,6 @@ body {
     margin-top: 10px;
 }
 
-.contact {
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 1s ease 1s forwards;
-}
-
-.contact a {
-    display: inline-block;
-    width: 250px;
-    height: 50px;
-    line-height: 50px;
-    font-weight: bold;
-    text-decoration: none;
-    background: #333;
-    text-align: center;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 3px solid #333;
-    transition: all 0.35s;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-.contact a:hover {
-    width: 300px;
-    border: 3px solid #2ecc71;
-    background: transparent;
-    color: #2ecc71;
-}
-
-.contact a:hover .icon {
-    border: 3px solid #2ecc71;
-    right: -5%;
-}
-
-.icon {
-    width: 50px;
-    height: 50px;
-    border: 3px solid transparent;
-    position: absolute;
-    transform: rotate(45deg);
-    right: 0;
-    top: 0;
-    z-index: -1;
-    transition: all 0.35s;
-}
-
-.icon svg {
-    width: 30px;
-    position: absolute;
-    top: calc(50% - 15px);
-    left: calc(50% - 15px);
-    transform: rotate(-45deg);
-    fill: #fff;
-    transition: all 0.35s;
-}
-
-.icon.discord {
-    background-color: #7289DA;
-}
-
-.icon.github {
-    background-color: #333;
-}
-
-.contact a:hover .icon.discord {
-    background-color: #7289DA;
-}
-
-.contact a:hover .icon.github {
-    background-color: #333;
-}
-
-.video-background {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1000;
-    overflow: hidden;
-    transition: 1s opacity;
-}
-
-.video-background iframe {
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
 .header {
     position: relative;
     z-index: 1;
@@ -160,8 +64,6 @@ body {
     text-align: center;
     padding: 100px;
 }
-
-/* Add Animation */
 
 @keyframes fadeIn {
     from {
