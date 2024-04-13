@@ -6,6 +6,22 @@ body {
     color: #fff;
 }
 
+
+.video-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+#backgroundVideo {
+    filter: blur(1px);
+}
+
 .header {
     padding: 20px;
     text-align: center;
@@ -19,7 +35,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 5px;
     gap: 20px;
     opacity: 0;
     transform: translateY(30px);
