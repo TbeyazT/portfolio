@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const videoContainer = document.getElementById('backgroundVideo');
     const videoSources = [
         'Videos/video1.mp4',
-        // Add more video paths as needed
+        "video2.mp4"
     ];
 
     // Play the first video
