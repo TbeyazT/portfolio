@@ -1,87 +1,93 @@
-body, html {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    color: #333;
-    background: #f9f9f9;
-    overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
 }
+
 
 .video-bg {
     position: fixed;
     right: 0;
     bottom: 0;
-    min-width: 100%; 
+    min-width: 100%;
     min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: -1;
 }
 
+#backgroundVideo {
+    filter: blur(1px);
+}
+
 .header {
+    padding: 20px;
     text-align: center;
-    padding: 2em 1em;
-    background: rgba(255, 255, 255, 0.9);
-}
-
-.header h1 {
-    font-size: 3em;
-    margin: 0.5em 0;
-}
-
-.header p {
-    font-size: 1.2em;
-    margin: 0.5em 0;
-}
-
-.header ul {
-    list-style: none;
-    padding: 0;
-}
-
-.header li {
-    font-size: 1.1em;
-    margin: 0.5em 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease forwards;
 }
 
 .works {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 2em 1em;
+    align-items: flex-start;
+    padding: 5px;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease 0.5s forwards;
 }
 
 .work {
-    background: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 1em;
-    padding: 1em;
-    width: calc(33% - 2em);
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+    background-color: #111;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .work:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 .work h2 {
-    font-size: 1.5em;
-    margin: 0.5em 0;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .work p {
-    font-size: 1em;
+    font-size: 16px;
 }
 
-@media (max-width: 768px) {
-    .work {
-        width: calc(50% - 2em);
+.work iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    padding: 100px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-}
-
-@media (max-width: 480px) {
-    .work {
-        width: calc(100% - 2em);
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
