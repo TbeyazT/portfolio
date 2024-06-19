@@ -5,6 +5,8 @@ body {
     background-color: #111;
     color: #fff;
     line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 .video-bg {
@@ -17,10 +19,7 @@ body {
     height: auto;
     z-index: -1;
     object-fit: cover;
-}
-
-#backgroundVideo {
-    filter: blur(2px);
+    filter: blur(2px); /* Add blur to the background video */
 }
 
 .header {
@@ -28,6 +27,7 @@ body {
     text-align: center;
     background: rgba(0, 0, 0, 0.6);
     border-bottom: 1px solid #333;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .header h1 {
@@ -70,6 +70,7 @@ body {
     color: #fff;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .work:hover {
