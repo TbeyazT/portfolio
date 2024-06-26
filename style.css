@@ -168,7 +168,7 @@ body {
     }
 }
 
-/* Button animation */
+/* Enhanced button animation */
 button {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -181,12 +181,20 @@ button {
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 9px #999; /* 3D shadow effect */
 }
 
 button:hover {
     background-color: white;
     color: black;
     border: 2px solid #4CAF50;
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 @keyframes buttonAnimation {
