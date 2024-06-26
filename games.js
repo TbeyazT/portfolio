@@ -2,31 +2,31 @@ const games = [
     {
         title: "Super Power Evolution Simulator",
         link: "https://www.roblox.com/games/12585099889/Super-Power-Evolution-Simulator",
-        image: "spes.webp",
+        image: "Images/spes.webp",
         description: "Ore system - Fixed some bugs - a lot more things"
     },
     {
         title: "Army Life Simulator",
         link: "https://www.roblox.com/games/10279525112/Turkish-Soldier-Simulator",
-        image: "teaf.webp",
+        image: "Images/teaf.webp",
         description: "Fixed A Lot Of Bugs - ReWritten Ui Scripts"
     },
     {
         title: "Bronx Streets 2",
         link: "https://www.roblox.com/games/17322605921/SCAMMING-Bronx-Streets-2",
-        image: "bronx.webp",
+        image: "Images/bronx.webp",
         description: "Gore System - Gun Fixes - A Lot More Things"
     },
     {
         title: "Soda Tycoon",
         link: "https://www.roblox.com/games/17700432018/Soda-Tycoon",
-        image: "soda.webp",
+        image: "Images/soda.webp",
         description: "Added Drop System"
     },
     {
         title: "Preppy Con",
         link: "https://www.roblox.com/games/14656343876/Preppy-con",
-        image: "preppy.webp",
+        image: "Images/preppy.webp",
         description: "Made a lot of things bug fixes - anti cheat - Systems - and a lot more"
     }
 ];
