@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3><a href="${game.link}" target="_blank">${game.title}</a></h3>
             <img src="${game.image}" alt="${game.title}" class="game-img">
             <p>${game.description}</p>
-            <a href="${game.link}" target="_blank"><button>Play Now</button></a>
         `;
 
         gamesContainer.appendChild(gameElement);
