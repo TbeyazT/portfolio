@@ -9,19 +9,6 @@ body {
     scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
-.video-bg {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    object-fit: cover;
-    filter: blur(2px); /* Add blur to the background video */
-}
-
 .header {
     padding: 50px 20px;
     text-align: center;
@@ -95,6 +82,54 @@ body {
     margin-top: 15px;
 }
 
+.games {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid #333;
+}
+
+.games h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+.game {
+    width: 80%;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.game:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+.game h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f39c12;
+}
+
+.game p {
+    font-size: 16px;
+}
+
+.game-img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -112,6 +147,10 @@ body {
     }
 
     .work {
+        width: 90%;
+    }
+
+    .game {
         width: 90%;
     }
 }
