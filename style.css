@@ -9,6 +9,19 @@ body {
     scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
+.video-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    filter: blur(2px); /* Add blur to the background video */
+}
+
 .header {
     padding: 50px 20px;
     text-align: center;
@@ -124,7 +137,7 @@ body {
 }
 
 .game-img {
-    width: 30%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     margin: 15px 0;
@@ -153,4 +166,36 @@ body {
     .game {
         width: 90%;
     }
+}
+
+/* Button animation */
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+@keyframes buttonAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+button:focus {
+    animation: buttonAnimation 0.5s ease-in-out;
+    outline: none;
 }
