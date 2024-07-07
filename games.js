@@ -40,6 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     async function fetchRobloxData(game) {
+        const gameElement = document.createElement("div");
+        gameElement.classList.add("game", "fade-in");
+
         try {
             const universeId = await getUniverseIdFromGameId(game.link.split('/').slice(-2, -1)[0]);
             const gameData = await fetchGameData(universeId);
@@ -60,8 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     games.forEach(game => {
-        const gameElement = document.createElement("div");
-        gameElement.classList.add("game", "fade-in");
         fetchRobloxData(game);
     });
 });
