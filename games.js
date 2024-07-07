@@ -56,6 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
             gamesContainer.appendChild(gameElement);
         } catch (error) {
             console.error("Error fetching Roblox data:", error.message);
+            gameElement.innerHTML = `
+                <h3><a href="${game.link}" target="_blank">${game.title}</a></h3>
+                <img src="${game.image}" alt="${game.title}" class="game-img">
+                <p>${game.description}</p>
+                <p>Failed to load additional data</p>
+            `;
         }
     }
 
