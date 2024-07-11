@@ -23,18 +23,6 @@ const games = [
         image: "Images/bronx.webp",
         description: "Gore System - Gun Fixes - A Lot More Things"
     },
-    {
-        title: "Soda Tycoon",
-        link: "https://www.roblox.com/games/17700432018/Soda-Tycoon",
-        image: "Images/soda.webp",
-        description: "Added Drop System"
-    },
-    {
-        title: "Preppy Con",
-        link: "https://www.roblox.com/games/14656343876/Preppy-con",
-        image: "Images/preppy.webp",
-        description: "Made a lot of things bug fixes - anti cheat - Systems - and a lot more"
-    }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
