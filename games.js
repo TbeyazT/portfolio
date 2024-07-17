@@ -12,12 +12,6 @@ const games = [
         description: "Ore system - Fixed some bugs - a lot more things"
     },
     {
-        title: "Army Life Simulator",
-        link: "https://www.roblox.com/games/10279525112/Turkish-Soldier-Simulator",
-        image: "Images/teaf.webp",
-        description: "Fixed A Lot Of Bugs - ReWritten Ui Scripts"
-    },
-    {
         title: "Bronx Streets 2",
         link: "https://www.roblox.com/games/17322605921/SCAMMING-Bronx-Streets-2",
         image: "Images/bronx.webp",
