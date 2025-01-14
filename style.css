@@ -189,3 +189,139 @@ footer {
   font-size: 1em;
 }
 
+/* Mobil ve Tablet İçin Ortak Düzenlemeler */
+@media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 5px;
+  }
+
+  .hero {
+    padding: 50px 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .btn {
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
+
+  .services {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .service-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .projects {
+    padding: 30px 10px;
+  }
+
+  .project-videos {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .video-card {
+    max-width: 100%;
+  }
+
+  .slider {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .slider img {
+    height: 30px;
+  }
+}
+
+/* Telefon İçin Özel Düzenlemeler */
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .services {
+    gap: 5px;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+
+  .projects h2 {
+    font-size: 1.8em;
+  }
+
+  .video-card {
+    padding: 15px;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+
+  .social-media img {
+    width: 25px;
+  }
+}
+
+/* Küçük Telefonlar İçin Ekstra Düzenlemeler */
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.5em;
+  }
+
+  .btn {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+
+  .service-card {
+    padding: 10px;
+  }
+
+  .projects h2 {
+    font-size: 1.5em;
+  }
+
+  .video-card {
+    padding: 10px;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+}
