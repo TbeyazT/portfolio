@@ -1,78 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Website</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="stars.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <a href="https://www.roblox.com/users/866597574/profile" target="_blank">
-      <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-B774B2082DE8D1C55AB701C767202F6C-Png/150/150/AvatarHeadshot/Webp/noFilter" style="width: 50px;" alt="TbeyazT">
-    </a>
-    <nav>
-      <!--<a href="#services" class="headerText">Services</a>-->
-      <a href="#projects" class="headerText">Projects</a>
+    <nav class="nav">
+        <h1>Portfolio</h1>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
-  </header>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 id="DevText">Creative Developer</h1>
+            <p>Turning ideas into exceptional digital experiences through innovative design and development.</p>
+            <a href="#contact" class="cta-btn">Get in Touch</a>
+        </div>
+        <!--<div id="3d-container"></div>-->
+        <div class="scroll-down">↓</div>
+    </section>
 
-  <section class="hero">
-    <h1>Design more value for your <span id="textToChange"></span>.</h1>
-    <p>Based in Hatay, TbeyazT is a passionate game developer dedicated to designing more value for your business.</p>
-    <a href="mailto:tbeyazzt@gmail.com" class="btn">Email</a>
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-video="aa.mp4" data-title="E-commerce Platform"
+                data-description="Modern shopping experience with React & Node.js">
+                <img src="Images/teaf.webp" alt="Project 1">
+                <div class="project-info">
+                    <h3>E-commerce Platform</h3>
+                    <p>Modern shopping experience with React & Node.js</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h3>Hello, for now i didnt record any videos for portfolio you should check my youtube channel for now.</h3>
-    <a href="https://www.youtube.com/@TbeyazT/videos" class="btn" target="_blank">Youtube (pretty old)</a>
-  </section>
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <h3>Web Development</h3>
+                <p>React, Node.js, Python</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="services" class="services">
-    <div class="service-card">
-      <h3>Software Development</h3>
-      <p>Offering end-to-end software development, including frontend, backend, and deployment.</p>
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Message" rows="5"></textarea>
+            </div>
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+    </section>
+
+    <div class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <video id="projectVideo" controls autoplay muted>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div class="tech-stack">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                </div>
+                <a href="#" class="live-demo-btn" target="_blank">Live Demo</a>
+            </div>
+        </div>
     </div>
-    <div class="service-card">
-      <h3>Startup Consultancy</h3>
-      <p>Helping startups and businesses choose the right tech stack and architecture.</p>
-    </div>
-    <div class="service-card">
-      <h3>Technology Audit</h3>
-      <p>Updating and optimizing outdated systems for better performance.</p>
-    </div>
-  </section>
 
-  <section id="projects" class="projects">
-    <h1><span>My Projects</span></h1>
-    <div class="project-videos" id="projectVideos"></div>
-  </section>   
+    <footer>
+        <p>&copy; <h id="Date"> 2 </h> TbeyazT. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/TbeyazT"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
 
-  <section class="slider">
-    <img src="https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/3437669b591509f77a654cfe589db196a21d1c05/icons/luau.svg" alt="Lua">
-    <img src="Images/nodejs.png" alt="NodeJs">
-    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968381.png" alt="TypeScript">
-  </section>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 TbeyazT. All rights reserved.</p>
-      <div class="social-media">
-        <a href="https://x.com/tbeyaz_t" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
-        </a>
-        <a href="https://github.com/TbeyazT" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
-        </a>
-        <a href="https://discord.com/users/682858488506220574" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/128/5968/5968756.png" alt="Discord" />
-        </a>
-      </div>
-    </div>
-  </footer>  
-
-  <script src="slider.js"></script>
-  <script src="TextChanger.js"></script>
-  <script src="projects.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="Init.js"> </script>
+    <script src="3dRender.js"></script>
 </body>
+
 </html>
