@@ -65,10 +65,11 @@ body {
 }
 
 .hero {
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   /* Change from space-between to center */
   padding: 0 8%;
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('pattern.png');
@@ -247,7 +248,8 @@ section {
 
 .video-container {
   position: relative;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 10.25%;
+  /* 16:9 aspect ratio */
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 25px;
@@ -326,14 +328,9 @@ section {
 
 #3d-container {
   width: 400px;
-  /* Set a fixed width */
   height: 400px;
-  /* Set a fixed height */
-  margin-left: 50px;
-  /* Add spacing from the text */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  filter: drop-shadow(0 0 30px rgba(0, 255, 136, 0.2));
 }
 
 input,
@@ -379,6 +376,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #3d-container {
+    display: none;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin-right: 0;
+  }
+
   .modal-content {
     width: 95%;
     padding: 15px;
