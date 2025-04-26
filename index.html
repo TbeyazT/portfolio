@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -29,19 +29,36 @@
             <p>Turning ideas into exceptional digital experiences through innovative design and development.</p>
             <a href="#contact" class="cta-btn">Get in Touch</a>
         </div>
-        <!--<div id="3d-container"></div>-->
+        <div id="3d-container"></div>
         <div class="scroll-down">↓</div>
     </section>
 
     <section id="projects">
         <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
-            <div class="project-card" data-video="aa.mp4" data-title="E-commerce Platform"
-                data-description="Modern shopping experience with React & Node.js">
-                <img src="Images/teaf.webp" alt="Project 1">
+            <div class="project-card" 
+                data-video="https://www.youtube.com/embed/4nQdU9H9toM" 
+                data-title="Cutscene System"
+                data-description="A fascinating cutscene system"
+                data-languages="React, Luau, MongoDB"
+                >
+                <img src="Images/CutscenePart.png" alt="Project 1">
                 <div class="project-info">
-                    <h3>E platform</h3>
-                    <p>smthng</p>
+                    <h3>Cutscene System</h3>
+                    <p>A fascinating cutscene system</p>
+                </div>
+            </div>
+
+            <div class="project-card" 
+                data-video="https://www.youtube.com/embed/inBI9mqDHuA" 
+                data-title="Caver Hands"
+                data-description="Cave Diving Hands Still On Beta"
+                data-languages="React, Node.js, MongoDB"
+                >
+                <img src="Images/CaveImage.png" alt="Project 2">
+                <div class="project-info">
+                    <h3>Caver Hands</h3>
+                    <p>Cave Diving Hands Still On Beta</p>
                 </div>
             </div>
         </div>
@@ -86,9 +103,6 @@
                 <h2 id="modalTitle"></h2>
                 <p id="modalDescription"></p>
                 <div class="tech-stack">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
                 </div>
                 <a href="#" class="live-demo-btn" target="_blank">Live Demo</a>
             </div>
@@ -106,7 +120,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="Init.js"> </script>
-    <!--<script src="3dRender.js"></script>-->
+    <script src="3dRender.js"></script>
 </body>
 
 </html>
