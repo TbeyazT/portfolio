@@ -1,7 +1,7 @@
 const categories = document.querySelectorAll('.category-btn');
 const projectCards = document.querySelectorAll('.project-card');
 const filterButtons = document.querySelectorAll('.filter-btn');
-
+// aa
 categories.forEach(btn => {
     btn.addEventListener('click', () => {
         categories.forEach(b => b.classList.remove('active'));
