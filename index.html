@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -35,32 +36,14 @@
 
     <section id="projects">
         <h2 class="section-title">Projects</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-skill="all">All</button>
+            <button class="filter-btn" data-skill="Roblox Studio">Roblox Studio</button>
+            <button class="filter-btn" data-skill="Unity">Unity</button>
+            <button class="filter-btn" data-skill="JavaScript">JavaScript</button>
+        </div>
         <div class="projects-grid">
-            <div class="project-card" 
-                data-video="https://www.youtube.com/embed/4nQdU9H9toM" 
-                data-title="Cutscene System"
-                data-description="A fascinating cutscene system"
-                data-languages="React, Luau, MongoDB"
-                >
-                <img src="Images/CutscenePart.png" alt="Project 1">
-                <div class="project-info">
-                    <h3>Cutscene System</h3>
-                    <p>A fascinating cutscene system</p>
-                </div>
-            </div>
-
-            <div class="project-card" 
-                data-video="https://www.youtube.com/embed/inBI9mqDHuA" 
-                data-title="Caver Hands"
-                data-description="Cave Diving Hands Still On Beta"
-                data-languages="React, Node.js, MongoDB"
-                >
-                <img src="Images/CaveImage.png" alt="Project 2">
-                <div class="project-info">
-                    <h3>Caver Hands</h3>
-                    <p>Cave Diving Hands Still On Beta</p>
-                </div>
-            </div>
+            <div class="projects-grid" id="projectsContainer"></div>
         </div>
     </section>
 
@@ -104,7 +87,6 @@
                 <p id="modalDescription"></p>
                 <div class="tech-stack">
                 </div>
-                <a href="#" class="live-demo-btn" target="_blank">Live Demo</a>
             </div>
         </div>
     </div>
