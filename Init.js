@@ -26,6 +26,17 @@ const Sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
+window.addEventListener('load', () => {
+    const welcome = document.getElementById('welcome-message');
+    setTimeout(() => {
+        welcome.style.opacity = '0';
+        setTimeout(() => {
+            welcome.remove();
+        }, 500); // animasyonun bitmesi için
+    }, 2000); // 2 saniye sonra kaybolacak
+});
+
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
